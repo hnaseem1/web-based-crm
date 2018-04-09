@@ -6,12 +6,14 @@
   </article>
 
 
-
+    <% counter = 1 %>
     <% @contacts.each do |contact| %>
+
       <article class="contact">
-      <h3><%= contact.full_name %> (<%= contact.email %>)</h3>
+      <h3><a href="contacts/<%= counter %>"> <%= contact.full_name %> (<%= contact.email %>)</a></h3>
         <a href="#">Edit</a> | <a href="#">Delete</a>
       </article>
+      <% counter += 1 %>
     <% end %>
 
 
