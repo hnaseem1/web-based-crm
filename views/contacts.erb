@@ -1,24 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Contacts</title>
-  </head>
-  <body>
-    <h1>Welcome to my Contacts Page</h1>
+<section class="contact-page">
+  <article class="contacts-total">
+
+    There are <strong><%= @contacts.length %></strong> contacts
+
+  </article>
+
+
+
     <% @contacts.each do |contact| %>
-
-      <!-- <h3><%= contact.full_name %></h3>
-      <ul>
-          <li>
-            <%= contact.email %>
-          </li>
-          <li>
-            <%= contact.note %>
-          </li>
-        </li>
-      </ul> -->
-
+      <article class="contact">
+      <h3><%= contact.full_name %> (<%= contact.email %>)</h3>
+        <a href="#">Edit</a> | <a href="#">Delete</a>
+      </article>
     <% end %>
-  </body>
-</html>
+
+
+</section>

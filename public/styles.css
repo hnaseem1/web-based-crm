@@ -1,0 +1,63 @@
+* {
+    font-family: sans-serif;
+}
+
+header {
+
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 10px;
+}
+
+.layout {
+
+  color: white;
+  background-color: grey;
+  margin-top: 2px;
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.layout a {
+  text-decoration: none;
+  color: white;
+
+}
+
+.contact {
+  background-color: #10DCCA;
+  color: black;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.contacts-total {
+  background-color: #FF7463;
+  color: black;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 20px;
+
+}
+
+main {
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.contact-page {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+
+}
