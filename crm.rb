@@ -25,7 +25,6 @@ get '/contacts/:id' do
   end
 end
 
-
 post '/contacts' do
   Contact.create(
   first_name: params[:first_name],
@@ -36,6 +35,16 @@ post '/contacts' do
   redirect to('/contacts')
 end
 
+post '/contacts/search' do
+# THIS PART IS BROKEN NEEDS FIXING
+  @contacts = []
+  Contact.all.each do |contact|
+    if contact.inspect.include?(params[:result])
+      @contacts << contact
+    end
+  end
+    erb :contacts
+end
 
 get '/contacts/:id/edit' do
   @contact = Contact.find_by(id: params[:id].to_i)

@@ -1,20 +1,15 @@
 <section class="contact-page">
   <article class="contacts-total">
-
     There are <strong><%= @contacts.length %></strong> contacts
-
+    <form class="search" action="/contacts/search" method="post">
+      <input type="text" name= "result" placeholder="Search..">
+      <input type="submit" value="Search">
+    </form>
   </article>
-
-
-
     <% @contacts.each do |contact| %>
-
       <article class="contact">
       <h3><a href="contacts/<%= contact.id %>"> <%= contact.full_name %> (<%= contact.email %>)</a></h3>
         <a href="/contacts/<%= contact.id %>/edit">Edit</a> | <a href="/contacts/<%= contact.id %>">Delete</a>
       </article>
-
     <% end %>
-
-
 </section>

@@ -1,11 +1,9 @@
 <article class="contact">
   <h3><%= @contact.full_name %> (<%= @contact.email %>)</h3>
   <h4><%= @contact.note %></h4>
-
   <form  action="/contacts/<%= @contact.id %>/edit" method="get">
     <input type="submit" value="Edit">
   </form>
-
   <form action="/contacts/<%= @contact.id %>" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Delete">
